@@ -1,153 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WTF: Webpack starter kit</title>
-    <meta name="description" content="Your project description" />
-    <!-- Title -->
-    <meta property="og:title" content="" />
-    <!-- OPTIONAL description. 2-4 sentences. -->
-    <meta property="og:description" content="" />
-    <!-- full url with http(s) ie. https://maciejkorsan.github.io/my-repo/ -->
-    <meta property="og:url" content="" />
-    <!-- full url to the image with http(s) ie. https://maciejkorsan.github.io/my-repo/assets/img/fb.png. Facebook suggests at least 1200 x 630. -->
-    <meta
-      property="og:image"
-      content="https://maciejkorsan.com/wtf-gulp-starter/assets/img/cover.png"
-    />
 
-    <!-- uncomment the line below to enable PWA  -->
-    <!-- <link rel="manifest" href="manifest.json" /> -->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My first homepage</title>
+	<!-- <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Condensed&display=swap" rel="stylesheet"> -->
+</head>
 
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="pwa/apple-icon-180.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="167x167"
-      href="pwa/apple-icon-167.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="pwa/apple-icon-152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="pwa/apple-icon-120.png"
-    />
+<body>
+	<div class="wrapper">
+		<header class="header header--js">
+			<nav class="navigation navigation--js">
+				<a class="navigation__link navigation__link--homepage" href="index.html">Main page</a>
+				<a class="navigation__link" href="aboutMe.html">About me</a>
+				<a class="navigation__link navigation__link--contact" href="contactForm.html">Contact</a>
+			</nav>
+			<button class="hamburger hamburger--js" aria-label="Open menu">Menu 🍔</button>
+		</header>
 
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+		<main class="main">
+			<header class="main__header">
+				<h1 class="main__heading main__heading--js">Thailand - a land of dreams</h1>
+			</header>
 
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2048-2732.png"
-      media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2732-2048.png"
-      media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1668-2388.png"
-      media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2388-1668.png"
-      media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1668-2224.png"
-      media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2224-1668.png"
-      media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1536-2048.png"
-      media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2048-1536.png"
-      media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1242-2688.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2688-1242.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1125-2436.png"
-      media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2436-1125.png"
-      media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-828-1792.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1792-828.png"
-      media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1242-2208.png"
-      media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-2208-1242.png"
-      media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-750-1334.png"
-      media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1334-750.png"
-      media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-640-1136.png"
-      media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
-    />
-    <link
-      rel="apple-touch-startup-image"
-      href="pwa/apple-splash-1136-640.png"
-      media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
-    />
-  </head>
-  <body>
-    <div class="hello">
-      <img class="hello__logo" src="../assets/img/logo.svg" alt="WTF " />
-      <span class="hello__circles"></span>
-    </div>
-  </body>
+			<section class="intro">
+				<h2 class="intro__header">Why Thailand?</h2>
+				<p class="intro__paragraph">	
+					I've heard a lot of interesting stories about life in Thailand. So far, I haven't had the opportunity to be there. I think that creating this site will allow me to gather a little more information on this fascinating topic as well as improve my skills in front end technologies.
+					So let's get to work:)</p>
+			</section>
+
+			<section class="about">
+				<h2 class="about__header">About the country</h2>
+				<section class="articles">
+					<article class="article">
+						<img class=article__picture src="../assets/img/book.jpg" alt="children with books">
+						<h3 class="article__header">Place on the map</h3>
+						<p class="article__paragraph">
+							Thailand, or rather the Kingdom of Thailand is a country located in Southeast Asia. Thailand borders on Laos, Cambodia, Malaysia and Birma. It is a lowland country located on the Indochina Peninsula. The northern and western parts of the country are occupied by young mountain ranges Tanen Taunggyi. The highest peak of Thailand is called Doi Inthanon at an altitude of 2595 meters a.s.l. Ok, enough of these trivia from the wiki. Let's look for more interesting ones.</p>
+					</article>
+
+					<article class="article">
+						<img class=article__picture src="../assets/img/elephant.jpg" alt="elephant">
+						<h3 class="article__header">First stop in Asia</h3>
+						<p class="article__paragraph">	
+							According to many, Thailand is the perfect country to start exploring Asia. The country does not overwhelm with chaos and poverty, as well as splendor and luxury. It is a country of kind people who respect tradition. There are bars with delicious cuisine, beautiful temples and if that was not enough, islands with white sand and emerald sea. What more could you want?:D</p>
+					</article>
+				</section>
+			</section>
+
+			<footer class="footer">
+				<p class="footer__paragraph">&copy Pawel Slupski's website, the website is being developed based on the knowledge acquired during the WTF training: What this frontend?! & Samurai of programming courses.</p>
+			</footer>
+			
+		</main>
+	</div>
+</body>
 </html>

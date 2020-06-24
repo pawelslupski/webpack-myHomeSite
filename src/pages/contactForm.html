@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+</head>
+<body>
+  <main>
+    <h1>Let's get to know each other</h1>
+    <div class="picture"></div>
+    <form method="post" action="https://dev.cotenfrontend.pl" class="form">
+      <p>
+        <label for="firstName">Your name:</label>
+        <input class="form__item" type="text" placeholder="Type your name" id="firstName" name="firstName">
+      </p>
+      <p>
+        <label>Your last name:
+        <input class="form__item" type="text" placeholder="Type your last name" id="lastName" name="lastName">
+        </label>
+      </p>
+      <fieldset>
+        <legend>Address</legend>
+        <p>
+          <label>Street name:
+          <input
+            class="form__item"
+            id="streetName"
+            placeholder="Please enter your street name"
+            name="streetName"
+          />
+          </label>
+        </p>
+        <p>
+          <label>City:
+          <input
+            class="form__item"
+            id="city"
+            placeholder="Please enter your city name"
+            name="city"
+          />
+          </label>
+        </p>
+        <p>
+          <label>Postal code:
+          <input
+            required
+            name="postalCode"
+            pattern="[0-9]{2}-[0-9]{3}"
+          />
+          </label>
+        </p>
+      </fieldset>
+      <p>
+        <label>Phone number:
+          <input
+            class="form__item"
+            type="tel"
+            id="phoneNumber"
+            name="favouriteNumber"
+            placeholder="Type your phone number"
+          />
+        </label>
+      </p>
+      <p>
+        <label>E-mail:
+          <input
+            required
+            class="form__item"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Type your email"
+          />
+        </label>
+      </p>
+      <p>
+        <label>How much do you like my site?:
+          <input
+            class="form__item range--js"
+            type="range"
+            id="range"
+            name="range"
+            min="0"
+            max="100"
+            step="5"
+          />
+        </label>
+      </p>
+      <p>
+        <label for="yourThoughts">Write what's on your mind:</label>
+        <textarea name="yourThoughts" id="yourThoughts">I am writing because...</textarea>
+      </p>
+      <p>
+        <label>In case you want to send me some file:
+          <input
+            class="form__item"
+            type="file"
+            id="attachment"
+            name="attachment"
+          />
+        </label>
+      </p>
+      <p>
+        <label for="article">Choose your favourite article:</label>
+          <select name="article" id="article">
+            <option value="article-1">first</option>
+            <option value="article-2">second</option>
+            <option value="article-3">third</option>
+          </select>
+      </p>
+      <fieldset>
+        <legend>Your dream continent</legend>
+        <p>
+          <label><input name="continent" type="radio" value="europe">Europe</label>
+        </p>
+        <p>
+          <label><input name="continent" type="radio" value="asia">Asia</label>
+        </p>
+        <p>
+          <label><input name="continent" type="radio" value="northAmerica">North America</label>
+        </p>
+        <p>
+          <label><input name="continent" type="radio" value="southAmerica">South America</label>
+        </p>
+        <p>
+          <label><input name="continent" type="radio" value="africa">Africa</label>
+        </p>
+        <p>
+          <label><input name="continent" type="radio" value="australiaOceania">Australia/Oceania</label>
+        </p>
+        <p>
+          <label><input name="continent" type="radio" value="antarctica">Antarctica</label>
+        </p>
+      </fieldset>
+      <p>
+        <label><input type="checkbox" name="agreement" checked="checked">
+          I hereby agree to thoughtless passing on my personal data to Slupas, for God knows what purpose:)</label>
+      </p>
+      <p>
+        <input type="submit" name="send" value="Send"/> 
+      </p>
+    </form>
+  </main>
+</body>
+</html>

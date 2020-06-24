@@ -3,11 +3,255 @@
 @import "_variables";
 @import "modules/hello.scss";
 
-body {
-  background: $wtf;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Condensed&display=swap');
+
+$sMobile: 320px;
+$mMobile: 375px;
+$tablet: 768px;
+
+html {
+  display: block;
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 10px;
+  font-family: 'Oswald', sans-serif;
+}
+
+div.wrapper {
+  min-width: 1024px;
+  max-width: 1720px;
   min-height: 100vh;
+  margin: 0 auto;
+  background-color: #2D2241;
+  color: #fff;
+  @media (min-width: $sMobile) and (max-width: $tablet) {
+    min-width: $sMobile;
+  }
+}
+
+.header {
+  padding: 20px 0px;
+  &--shrink {
+    @media (min-width: $sMobile) and (max-width: $mMobile) {
+      min-height: 40px;
+    }
+  }
+  @media (min-width: $sMobile) and (max-width: $mMobile) {
+    display: block;
+    min-height: 80px;
+    width: 100%;
+    top: 0;
+  }
+  @media (min-width: $sMobile) and (max-width: $tablet) {
+    padding: 10px 0px;
+  }
+}
+
+.hamburger {
+  display: none;
+  @media (min-width: $sMobile) and (max-width: $mMobile) {
+    display: block;
+    position: absolute;
+    border: 1px solid white;
+    background-color: white;
+    color: black;
+    top: 10px;
+    right: 16px;
+  }
+}
+
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  &__link {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 3vw;
+    background-color: darkcyan;
+    font-size: 0.8vw;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-style: none;
+    border-radius: 20px;
+    box-shadow: 0 0 0 2px #2D2241, 0 0 0 4px white; 
+    color: white;
+    padding: 5px 10px;
+    transition: .2s;
+    &--contact {
+      background-color: #000;
+    }
+    &:hover {
+      box-shadow: 0 0 0 4px #2D2241, 0 0 0 6px white; 
+    }
+    @media (min-width: $sMobile) and (max-width: $mMobile) {
+      display: block;
+      height: 12px;
+      margin: 10px;
+      padding: 5px 10px;
+      text-align: center;
+    }
+    @media (min-width: $sMobile) and (max-width: $tablet) {
+      font-size: 1vw;
+    }
+  }
+  @media (min-width: $sMobile) and (max-width: $mMobile) {
+    display: block;
+    width: 70px;
+    height: 60px;
+    position: absolute;
+    left: 20px;
+    top: 2px;
+  }
+  &--hide {
+    @media (min-width: $sMobile) and (max-width: $mMobile) {
+      display: none;
+    }
+  }
+}
+
+.main {
+  min-height: 80vh;
+  display: grid;
+  grid-template-areas: "header" "intro" "about" "footer";
+  row-gap: 0.9vw;
+  &__header {
+    height: 70vh;
+    text-transform: uppercase;
+    background-image: url(../assets/img/rice_plantation.jpg);
+    background-position:  center center;
+    background-attachment: fixed;
+    background-size: cover;
+    @media (min-width: $sMobile) and (max-width: $tablet) {
+      height: 50vh;
+    }
+  }
+  &__heading {
+    margin: 0px auto;
+    font-size: 4vw;
+    line-height: 70vh;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.1);
+    @media (min-width: $sMobile) and (max-width: $tablet) {
+      line-height: 50vh;
+    }
+  }
+}
+
+.intro {
+  grid-area: intro;
+  max-width: 1720px;
+  margin: 10px auto;
+  width: 60%;
+  text-align: center;
+  &__header {
+    margin: 10px auto;
+    font-size: 2.5vw;
+    color: #4DA1A9;
+    @media (min-width: $sMobile) and (max-width: $tablet) {
+      margin: 10px auto 0;
+      font-size: 3vw;
+    }
+  }
+  &__paragraph {
+    margin: 0 auto;
+    padding: 5px 10px 10px 10px;
+    font-size: 1.3vw;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    @media (min-width: $sMobile) and (max-width: $tablet) {
+      padding: 5px 10px 10px 10px;
+      font-size: 2.5vw;
+    }
+  }
+}
+
+.about {
+  grid-area: about;
+  margin: 0px auto;
+  max-width: 1720px;
+  &__header {
+    margin: 16px auto;
+    font-size: 2.5vw;
+    text-align: center;
+    color: #4DA1A9;
+  }
+  @media (min-width: $sMobile) and (max-width: $tablet) {
+    padding: 5px 10px 10px 10px;
+    font-size: 3vw;
+  }
+}
+
+.articles {
+  width: 90%;
+  margin: 37.35px auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  @media (min-width: $sMobile) and (max-width: $tablet) {
+    margin-bottom: 10px;
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+  }
+}
+
+.article {
+  display: flex;
+  flex-flow: row wrap;
+  width: 42%; 
+  justify-content: center;
+  align-items: center;
+  color: black;
+  background-color: bisque;
+  &__header { 
+    margin: 0 auto;
+    font-size: 1.6vw;
+    text-align: center;
+    color: #4DA1A9;
+    @media (min-width: $sMobile) and (max-width: $tablet) {
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+  &__picture {
+    height: 65%;
+    width: 90%;
+    @media (min-width: $sMobile) and (max-width: $tablet) {
+      width: 95%;
+      height: 70%;
+    }
+  }
+  &__paragraph {
+    margin: 0 auto;
+    padding: 10px;
+    padding-bottom: 15px;
+    text-align: center;
+    font-size: 1vw;
+  }
+  @media (min-width: $sMobile) and (max-width: $tablet) {
+    margin: 5px 10px;
+    padding: 5px;
+  }
+}
+
+.footer {
+  padding: 0.8vw;
+  grid-area: footer;
+  background-color: black;
+  &__paragraph {
+    margin: 0px;
+    padding: 0.8vw;
+    font-size: 0.8vw;
+    text-align: center;
+    color: white;
+  }
 }
