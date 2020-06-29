@@ -7,7 +7,8 @@
 
 $sMobile: 320px;
 $mMobile: 375px;
-$tablet: 768px;
+$lMobile: 425px;
+$tablet: 768px; 
 
 html {
   display: block;
@@ -37,19 +38,19 @@ div.wrapper {
 
 .header {
   padding: 20px 0px;
-  &--shrink {
-    @media (min-width: $sMobile) and (max-width: $mMobile) {
-      min-height: 40px;
-    }
-  }
   @media (min-width: $sMobile) and (max-width: $mMobile) {
     display: block;
-    min-height: 80px;
+    height: 80px;
     width: 100%;
     top: 0;
   }
   @media (min-width: $sMobile) and (max-width: $tablet) {
     padding: 10px 0px;
+  }
+  &--shrink {
+    @media (min-width: $sMobile) and (max-width: $mMobile) {
+      height: 40px;
+    }
   }
 }
 
@@ -61,8 +62,8 @@ div.wrapper {
     border: 1px solid white;
     background-color: white;
     color: black;
-    top: 10px;
-    right: 16px;
+    top: 12px;
+    right: 12px;
   }
 }
 
@@ -119,9 +120,6 @@ div.wrapper {
 
 .main {
   min-height: 80vh;
-  display: grid;
-  grid-template-areas: "header" "intro" "about" "footer";
-  row-gap: 0.9vw;
   &__header {
     height: 70vh;
     text-transform: uppercase;
@@ -147,9 +145,8 @@ div.wrapper {
 }
 
 .intro {
-  grid-area: intro;
   max-width: 1720px;
-  margin: 10px auto;
+  margin: 2.5vw auto 1vw;
   width: 60%;
   text-align: center;
   &__header {
@@ -157,7 +154,7 @@ div.wrapper {
     font-size: 2.5vw;
     color: #4DA1A9;
     @media (min-width: $sMobile) and (max-width: $tablet) {
-      margin: 10px auto 0;
+      margin: 0 auto;
       font-size: 3vw;
     }
   }
@@ -168,84 +165,76 @@ div.wrapper {
     text-align: center;
     font-family: 'Roboto Condensed', sans-serif;
     @media (min-width: $sMobile) and (max-width: $tablet) {
-      padding: 5px 10px 10px 10px;
+      padding: 5px;
       font-size: 2.5vw;
     }
   }
 }
 
 .about {
-  grid-area: about;
-  margin: 0px auto;
   max-width: 1720px;
+  margin-bottom: 2vw;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
   &__header {
-    margin: 16px auto;
-    font-size: 2.5vw;
+    margin: 0px auto 1vw;
     text-align: center;
+    font-size: 2.5vw;
     color: #4DA1A9;
+    @media (min-width: $sMobile) and (max-width: $tablet) {
+      font-size: 3vw;
+    }
   }
   @media (min-width: $sMobile) and (max-width: $tablet) {
-    padding: 5px 10px 10px 10px;
-    font-size: 3vw;
+    margin-bottom: 4vw;
   }
 }
 
 .articles {
-  width: 90%;
-  margin: 37.35px auto;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  @media (min-width: $sMobile) and (max-width: $tablet) {
-    margin-bottom: 10px;
-    padding: 0;
-    display: flex;
-    flex-flow: row wrap;
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  row-gap: 2.5vw;
+  column-gap: 1vw;
 }
 
 .article {
+  height: 100%;
+  margin: 0 auto;
+  padding: 10px;
   display: flex;
-  flex-flow: row wrap;
-  width: 42%; 
-  justify-content: center;
-  align-items: center;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-content: center;
   color: black;
   background-color: bisque;
-  &__header { 
-    margin: 0 auto;
+  &__header {
+    margin: 10px 0;
     font-size: 1.6vw;
     text-align: center;
     color: #4DA1A9;
-    @media (min-width: $sMobile) and (max-width: $tablet) {
-      margin: 0 auto;
-      text-align: center;
+    @media (min-width: $sMobile) and (max-width: $lMobile) {
+      margin: 5px 0;
     }
   }
   &__picture {
-    height: 65%;
-    width: 90%;
-    @media (min-width: $sMobile) and (max-width: $tablet) {
-      width: 95%;
-      height: 70%;
-    }
+    display: block;
+    height: 75%;
+    width: 100%;
   }
   &__paragraph {
-    margin: 0 auto;
-    padding: 10px;
-    padding-bottom: 15px;
+    margin: 0;
     text-align: center;
     font-size: 1vw;
   }
-  @media (min-width: $sMobile) and (max-width: $tablet) {
-    margin: 5px 10px;
+  @media (min-width: $sMobile) and (max-width: $lMobile) {
+    width: 60%;
     padding: 5px;
   }
 }
 
 .footer {
   padding: 0.8vw;
-  grid-area: footer;
   background-color: black;
   &__paragraph {
     margin: 0px;
