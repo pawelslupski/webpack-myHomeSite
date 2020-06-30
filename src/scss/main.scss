@@ -192,10 +192,18 @@ div.wrapper {
 }
 
 .articles {
+  margin: 0px 30px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-rows: 70vh;
   row-gap: 2.5vw;
   column-gap: 1vw;
+  @media (min-width: $sMobile) and (max-width: $mMobile) {
+    grid-template-rows: 20vh;
+  }
+  @media (min-width: $lMobile) and (max-width: $tablet) {
+    grid-template-rows: 40vh;
+  }
 }
 
 .article {

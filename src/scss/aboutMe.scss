@@ -3,6 +3,11 @@ font-family: 'Roboto Condensed', sans-serif; */
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Condensed&display=swap');
 
+$sMobile: 320px;
+$mMobile: 375px;
+$lMobile: 425px;
+$tablet: 768px; 
+
 html {
   box-sizing: border-box;
 }
@@ -17,113 +22,157 @@ html {
 }
 
 div.wrapper {
-  max-width: 1890px;
+  min-width: 1024px;
+  max-width: 1720px;
+  min-height: 100vh;
   margin: 0 auto;
   background-color: #2D2241;
   color: #fff;
   background-color: #08AEEA;
   background-image: linear-gradient(0deg, #08AEEA 0%, #2AF598 100%);
+  @media (min-width: $sMobile) and (max-width: $tablet) {
+    min-width: $sMobile;
+  }
 }
 
 .header {
-  padding: 25px 0px;
+  padding: 20px 0px;
   text-align: right;
+  @media (min-width: $sMobile) and (max-width: $lMobile) {
+    padding: 10px 0px;
+  }
+  @media (min-width: $tablet) and (max-width: $tablet) {
+    padding: 15px 0px;
+  }
 }
 
-.navigation__link {
-  display: inline-block;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-right: 40px;
-  background-color: #15A680;
-  font-size: 1.6rem;
-  font-family: 'Roboto', sans-serif;
-  text-transform: uppercase;
-  text-decoration: none;
-  border-style: none;
-  border-radius: 20px;
-  box-shadow: 0 0 0 2px #27F19C, 0 0 0 4px white; 
-  color: white;
-  padding: 10px 20px;
-  transition: .2s;
-}
-
-.navigation__link:hover { 
-  box-shadow: 0 0 0 4px #27F19C, 0 0 0 6px white; 
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+  align-content: center;
+  &__link {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 3vw;
+    background-color: #15A680;
+    font-size: 0.8vw;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-style: none;
+    border-radius: 20px;
+    box-shadow: 0 0 0 2px #27F19C, 0 0 0 4px white; 
+    color: white;
+    padding: 5px 10px;
+    transition: .2s;
+    @media (min-width: $sMobile) and (max-width: $mMobile) {
+      margin-right: 4vw;
+    }
+    &:hover {
+      box-shadow: 0 0 0 4px #27F19C, 0 0 0 6px white; 
+    }
+  }
 }
 
 .main {
+  position: relative;
   min-height: 70vh;
-  display: grid;
-  grid-template-areas: "header" "intro" "footer";
-}
-
-.main__header {
-  grid-area: header;
-  height: 30vh;
-  text-transform: uppercase;
-  background-image: url(../assets/img/apps.jpg);
-  background-size: cover;
-  background-attachment: fixed;
+  &__header {
+    height: 40vh;
+    text-transform: uppercase;
+    background-image: url(../assets/img/apps.jpg);
+    background-position:  center center;
+    background-attachment: fixed;
+    background-size: cover;
+    @media (min-width: $sMobile) and (max-width: $lMobile) {
+      height: 30vh;
+    }
+  }
 }
 
 .intro {
-  grid-area: intro;
-  max-width: 1600px;
-  margin: 4vh auto;
-  text-align: center;
-}
-
-.intro__picture {
-  margin: 0px;
-  max-height: 400px;
-  padding: 10px;
-  background-color: white;
-}
-
-.intro__header {
-  margin: 10px auto;
-  text-align: center;
-  font-size: 4rem;
-  color: white;
+  max-width: 1720px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2.5vw auto 2vw;
+  &__header {
+    margin: 10px auto 5px;
+    font-size: 2.5vw;
+    color: white;
+    text-align: center;
+    @media (min-width: $sMobile) and (max-width: $tablet) {
+      width: 50%;
+      margin: 0 auto;
+      font-size: 3vw;
+    }
+  }
+  &__picture {
+    display: block;
+    height: 75%;
+    width: 80%;
+    margin: 0px auto;
+    max-height: 400px;
+    padding: 7px;
+    background-color: white;
+    @media (min-width: $tablet) and (max-width: $tablet) {
+      padding: 5px;
+    }
+    @media (min-width: $sMobile) and (max-width: $lMobile) {
+      padding: 2px;
+    }
+  }
+  &__paragraph {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1vw;
+    font-family: 'Roboto Condensed', sans-serif;
+    @media (min-width: $sMobile) and (max-width: $lMobile) {
+      width: 60%;
+      font-size: 1.6vw;
+    }
+  }
 }
 
 button.action--js {
-  margin-bottom: 10px;
+  margin: 0px auto 10px;
+  width: 100px;
   padding: 5px 10px;
   border-radius: 10px;
   background-color: black;
   color: white;
+  font-size: 1vw;
   font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
-}
-
-.intro__paragraph {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-  font-size: 2rem;
-  font-family: 'Roboto Condensed', sans-serif;
+  @media (min-width: $sMobile) and (max-width: $lMobile) {
+    margin: 0px auto 5px;
+    width: 70px;
+    padding: 5px 10px;
+  }
 }
 
 .footer {
-  grid-area: footer;
-  min-height: 100px;
+  padding: 0.8vw; 
   background-color: black;
-}
-
-.footer__paragraph {
-  margin: 0px auto;
-  line-height: 100px;
-  font-size: 1.6rem;
-  text-align: center;
-  color: white;
-}
-
-.footer__link {
-  text-decoration: none;
-  color: orange;
-  font-weight: bold;
+  @media (min-width: $sMobile) and (max-width: $tablet) {
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+  }
+  &__paragraph {
+    margin: 0px auto;
+    padding: 0.8vw;
+    font-size: 0.8vw;
+    text-align: center;
+    color: white;
+  }
+  &__link {
+    text-decoration: none;
+    color: orange;
+    font-weight: bold;
+  }
 }
 
 
