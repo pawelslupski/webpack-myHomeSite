@@ -1,4 +1,4 @@
-![cover](./src/img/ocean.jpg)
+![cover](./src/assets/img/ocean.jpg)
 
 # Pawel Slupski's Homesite 
 
