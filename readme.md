@@ -1,4 +1,4 @@
-![cover](https://pixabay.com/photos/agriculture-rice-plantation-thailand-1807581/)
+![cover](https://cdn.pixabay.com/photo/2016/11/08/05/54/agriculture-1807581_960_720.jpg)
 
 # Pawel Slupski's Homesite 
 
