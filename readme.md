@@ -1,4 +1,4 @@
-![cover](https://cdn.pixabay.com/photo/2016/11/08/05/54/agriculture-1807581_960_720.jpg)
+![cover](https://cdn.pixabay.com/photo/2016/11/08/04/46/jetty-1807471_960_720.jpg)
 
 # Pawel Slupski's Homesite 
 
