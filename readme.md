@@ -1,12 +1,12 @@
-![cover](https://cotenfrontend.pl/img/cover.png)
+![cover](https://cdn.pixabay.com/photo/2016/11/14/04/45/bicycle-1822640_960_720.jpg)
 
-# WTF Webpack Starter Kit 
+# Pawel Slupski's Homesite 
 
-Simple toolkit for your static websites development.
+Website design, based on a webpack, the main theme of which is Thailand.
 
-## How to use it?
+## How to launch it?
 
-Click on `Use this template` button to generate a new repository based on this starter kit. After that clone it to your computer, go to the project directory in console and type `npm install`.
+First you have to type `npm install` and then select the following options below:
 
 ## Available scripts
 
