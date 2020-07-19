@@ -1,4 +1,4 @@
-![cover](https://pixabay.com/photos/river-kwai-thailand-boat-trip-fog-2494526/)
+![cover](https://pixabay.com/photos/river-kwai-thailand-boat-trip-fog-2494526)
 
 # Pawel Slupski's Homesite 
 
